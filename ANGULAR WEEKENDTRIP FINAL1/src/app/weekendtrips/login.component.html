@@ -1,0 +1,277 @@
+<section>
+  <!-- <div class="colour"></div>
+  <div class="colour"></div>
+  <div class="colour"></div> -->
+  <div class="box">
+    <div class="square" style="--i: 0"></div>
+    <div class="square" style="--i: 1"></div>
+    <div class="square" style="--i: 2"></div>
+    <div class="square" style="--i: 3"></div>
+    <div class="square" style="--i: 4"></div>
+    <div class="container">
+      <div class="form">
+        <h2>Login Form</h2>
+        <form #from="ngForm" (ngSubmit)="saveLogin(from)">
+          <div class="input__box">
+            <!-- Email input -->
+            <label class="form-label" for="form2Example1">Email address</label>
+            <input
+              type="email"
+              id="form2Example1"
+              class="form-control"
+              name="email"
+              [(ngModel)]="login.password"
+              required
+            />
+          </div>
+          <div class="input__box">
+            <!-- Password input -->
+            <label class="form-label" for="form2Example2">Password</label>
+            <input
+              type="password"
+              id="form2Example2"
+              class="form-control"
+              name="password"
+              [(ngModel)]="login.email"
+              required
+            />
+          </div>
+          <div class="row mb-4">
+            <div class="col d-flex justify-content-center">
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="form2Example34"
+                  checked
+                />
+                <label class="form-check-label" for="form2Example34">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Simple link -->
+              <a href="#!">Forgot password?</a>
+            </div>
+
+            <div class="input__box">
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign in
+              </button>
+            </div>
+            <p>
+              Not a member?
+              <input
+                class="btn btn-primary"
+                type="buttton"
+                (click)="showModal()"
+                value="Register"
+              />
+            </p>
+          </div>
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+
+          <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+
+          <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Register buttons -->
+<!--button add passenger-->
+<!--modal-->
+
+<div
+  style="display: none"
+  class="modal"
+  tabindex="-1"
+  style="display: block"
+  *ngIf="this.showmodal"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Register</h4>
+
+        <span
+          aria-hidden="true"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="hideModal()"
+        >
+          <i class="fas fa-xmark"> </i>
+        </span>
+      </div>
+      <div class="modal-body">
+        <form
+          #from1="ngForm"
+          style="width: 500px"
+          (ngSubmit)="registerUser(from1)"
+          novalidate
+        >
+          <table cellspacing="30">
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2"> First Name</label>
+              </td>
+              <td>
+                <!-- Email input -->
+                <input
+                  type="text"
+                  id="form2Example2"
+                  class="form-control"
+                  name="firstname"
+                  [(ngModel)]="register.firstname"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2">Last Name</label>
+              </td>
+              <td>
+                <!-- Email input -->
+                <input
+                  type="text"
+                  id="form2Example2"
+                  class="form-control"
+                  name="lastname"
+                  [(ngModel)]="register.lastname"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2">Age</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="form2Example2"
+                  class="form-control"
+                  name="age"
+                  [(ngModel)]="register.age"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2">Gender :-</label>
+              </td>
+              <td>
+                &nbsp;<input
+                  type="radio"
+                  name="gender"
+                  id="form2Example2"
+                  value="Male"
+                  [(ngModel)]="register.gender"
+                />  Male <i class="fas fa-person"></i> &nbsp; &nbsp;
+                <input
+                  type="radio"
+                  name="gender"
+                  id="form2Example2"
+                  value="Female"
+                  [(ngModel)]="register.gender"
+                />
+                Female <i class="fas fa-person-dress"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example1"
+                  >Email address</label
+                >
+              </td>
+              <td>
+                <input
+                  type="email"
+                  id="form2Example1"
+                  class="form-control"
+                  name="email"
+                  [(ngModel)]="register.email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2">Password</label>
+              </td>
+              <td>
+                <input
+                  type="password"
+                  id="form2Example2"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="register.password"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="form2Example2"
+                  >MobileNumber</label
+                >
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="form2Example2"
+                  class="form-control"
+                  name="mobileNumber"
+                  [(ngModel)]="register.mobileNumber"
+                  required
+                />
+              </td>
+            </tr>
+          </table>
+
+          <!-- Password input -->
+          <!-- 2 column grid layout for inline styling -->
+
+          <!-- Submit button -->
+          <div class="modal-footer" style="width:481px;">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="hideModal()"
+            >
+              Close
+            </button>
+
+            &nbsp; &nbsp; &nbsp;
+          </div>
+
+          <!-- Register buttons -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

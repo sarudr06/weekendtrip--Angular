@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-sm-4 " *ngFor="let pack of packagees" >
+      <div class="card customcard">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="pack.pimageUrl" width="inherit" height="300px"/>
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+    <h4 class="card-title text-success"> {{pack.packageName}}</h4>
+    <p class="text-success"><b>Price:</b>  {{pack.packagePrice}} <small>Only</small></p>
+
+    <h5>
+      <b><i>Category</i></b> :{{pack.packageCategory}}
+    </h5>
+    <small>{{pack.packageDescription}}</small>
+<br><br>
+      <button type="button" class="btn btn-warning  btn-sm"routerLink="/cities" >Go to Cities</button>&nbsp;
+      <button type="button" class="btn btn-primary  btn-sm" routerLink="/place">Places</button>&nbsp;
+       <button type="submit" class="btn btn-success btn-sm" (click)="bookNow(pack.packageId)" >BookNow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

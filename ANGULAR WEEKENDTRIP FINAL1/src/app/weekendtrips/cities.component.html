@@ -1,0 +1,38 @@
+
+  <div class="custompass">
+    <div class="container ">
+      <div class="row" >
+        <div class="col-sm-4 " *ngFor="let city of cities" >
+          <div class="card customcard">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{{city.cimageUrl}}" width="inherit" height="300px"/>
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-success"> {{city.cityName}}</h5>
+          <a class="btn btn-primary" [routerLink]="['/packages',city.cityId]" >Go to pakeges</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ <!-- <br><br><br><br><br>
+ <div class="container ">
+ <div class="row">
+  <div class="col-sm-4 " *ngFor="let city of cities" style="margin-bottom: 30px;" >
+  <div class="flip" style="background: url({{city.cimageUrl}});">
+    <div class="content" >
+        <div class="front" >
+            <h2>{{city.cityName}}</h2>
+        </div>
+        <div class="back">
+            <button class="btn btn-success"  [routerLink]="['/packages',city.cityId]"> Go to Packages</button>
+        </div>
+    </div>
+  </div>
+  </div>
+ </div>
+</div> -->

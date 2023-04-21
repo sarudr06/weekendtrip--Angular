@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="row">
+    <div class="flip" *ngFor="let place of  placesArry">
+      <div class="content" >
+          <div class="front" style="background: url({{place.placeImageUrl}});">
+              <h2>{{place.placeName}}</h2>
+              <p>Front Description</p>
+          </div>
+          <div class="back">
+              <h2>Book Now </h2>
+              <p>Back Description</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- public :string -->

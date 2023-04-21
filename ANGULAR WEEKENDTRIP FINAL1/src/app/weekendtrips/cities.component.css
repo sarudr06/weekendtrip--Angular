@@ -1,0 +1,13 @@
+.card{
+  margin-top: 20px;
+}
+.customcard{
+  border: 3px solid rgb(50, 223, 195);
+  box-shadow: 0px 0px 20px rgb(201, 101, 34);
+  margin: 30px;
+  border-radius: 10px;
+}
+.custompass{
+  background: linear-gradient(-45deg,rgba(255, 255, 255, 0.499),rgba(0, 255, 229, 0.285));
+  backdrop-filter: blur(3px);
+}
